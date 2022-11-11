@@ -1,56 +1,217 @@
-body {
-font-family: 'Roboto', sans-serif;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
 }
 
-header {
-	background: grey;
-    text-align: center;
+.background{
+	background-image: url('primeiraImagem.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	width: 100%;
 }
 
-.cabeçario{
-	padding: 5%;
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px;
+	padding-left: 8%;
+	padding-right: 8%;
+}
+
+nav h2{
+	color: #fff;
+	font-size: 35px;
+	cursor: pointer;
+	letter-spacing: 3px;
+}
+
+span{
+	color: #FF7F50;
+}
+
+nav ul li{
+	display: inline-block;
+	padding: 10px 25px;
+	list-style-type: none;
+}
+
+nav ul li a{
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: capitalize;
+
+}
+
+nav ul li a:hover{
+	color: #FF7F50;
+	transform: scale(1.2);
+}
+
+.btn{
+	
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 10px 25px;
+	border-radius: 30px;
+	transition:  .4s;
+}
+
+.btn:hover{
+	background-color:#FF7F50;
+	transform: scale(1.2);
+}
+
+.Main{
+	position: absolute;
+	top: 50%;
+	left: 8%;
+}
+
+h4{
+	font-size: 20px;
+	letter-spacing: 3px;
+	color: #fff;
+}
+
+
+/** animação apresentação **/
+
+.animacaoNome{
+	margin: 20px 0px 20px;
+	display: inline-block;
+	padding-top: 20px;
+	padding-right: 0px;
+	color: #fff;
+	font-size: 75px;
+	font-family: 'Alkalami', serif;
+	text-shadow: 3px 1px #000000;
+	border-right: 2px solid #000000;
+	max-width: 0%;
+	white-space: nowrap;
+	overflow: hidden;
+	animation: pisca normal infinite 500ms, escrever normal 2.5s steps(90) both;
+}
+
+@keyframes pisca{
+	100%{
+		border-right-color: transparent;
+			}
+}
+
+@keyframes escrever{
+	100%{
+		max-width: 100%;
+			}
+}
+
+/** Fim animação **/
+
+h3{
+	color: #fff;
+	font-size: 25px;
+	margin-bottom: 50px;
+	letter-spacing: 5px;
+	text-transform: capitalize;
+}
+
+.background-color-sobre{
+	background-color: #191919;
+	width: 100%;
+	padding: 100px 0px;
+}
+
+.background-color-sobre img{
+	width: 430px;
+	height: auto;
+}
+
+.text-sobre{
+	width: 550px;
+}
+
+.main-sobre{
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	width: 1130px;
+	margin: 0 auto;
 }
 
-.imagem-titulo{
-	background: #D2691E;
-	width: 20%;
-	border-radius: 50%;
-	display: block;
-    left: 20%;
-    transition: 1s;
-}
-.imagem-titulo:hover{
-	background: darkorange;
-}
-
-.imagem-principal{
-	width: 60%
-}
-
-.nome-apresentação{
-	display: block;
-	color: #000000;
+.text-sobre h2{
+	color: #fff;
 	font-size: 60px;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+}
+
+.text-sobre h5{
+	color: #fff;
+	letter-spacing: 3px;
+	font-size: 22px;
+	margin-bottom: 10px;
+	text-transform: capitalize;
+}
+
+.text-sobre p{
+	color: #fcfcfc;
+	letter-spacing: 1px;
+	line-height: 28px;
+	font-size: 18px;
+	margin-bottom: 45px;
+}
+
+.button {
+	background-color:#FF7F50;
+	color: #fff;
+	text-transform: none;
+	border: 2px solid transparent;
 	font-weight: bold;
-	font-family: 'Alkalami', serif;
-	text-shadow: 5px 2px darkorange;
+	padding: 13px 100px;
+	border-radius: 30px;
+	margin-left: 20%;
+	transition: .4s;
+	text-transform: capitalize;
+}
+
+.button:hover{
+	border: 2px solid #FF7F50 ;
+	background-color: transparent;
+	transform: scale(1.2);
+	cursor: pointer;
 
 }
 
-li{
-	margin: 5px;
+.main-icones{
+	list-style-type: none;
+	display: flex;
+	margin-top: 40px;
+	justify-content: space-evenly;
 }
 
-a{
-	font-size: 20px;
-	color: black;
-	font-weight: bold;
-	text-decoration: none;
+.main-icones li{
+	display: inline-block;
+	font-size: 40px;
+	transition: .4s;
 }
 
-a:hover {
-	color: darkorange ;
+.main-icones li:hover{
+	transform: scale(1.5);
+}
+
+.main-icones li a{
+	color: #fff;
+	opacity: 0.09;
+	transition: .4s;
+}
+
+.main-icones li a:hover{
+	opacity: 1;
+	color: #FF7F50;
+	transform: scale(1.2) ;
 }
